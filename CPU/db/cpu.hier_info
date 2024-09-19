@@ -1,0 +1,162 @@
+|cpu
+OUT[1] <= aula4:inst3.saida_a
+OUT[2] <= aula4:inst3.saida_b
+OUT[3] <= aula4:inst3.saida_c
+OUT[4] <= aula4:inst3.saida_d
+OUT[5] <= aula4:inst3.saida_e
+OUT[6] <= aula4:inst3.saida_f
+OUT[7] <= aula4:inst3.saida_g
+CLRN => registrador:inst.CLRN
+LOAD => registrador:inst.LOAD
+CLK => registrador:inst.CLK
+IN[0] => registrador:inst.D[0]
+IN[1] => registrador:inst.D[1]
+IN[2] => registrador:inst.D[2]
+IN[3] => registrador:inst.D[3]
+
+
+|cpu|aula4:inst3
+saida_a <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst3.IN0
+A => inst5.IN0
+A => inst53.IN0
+A => inst54.IN0
+A => inst34.IN0
+A => inst22.IN0
+A => inst17.IN0
+A => inst14.IN0
+A => inst27.IN0
+A => inst30.IN0
+A => inst68.IN0
+A => inst10.IN0
+A => inst1.IN2
+A => inst66.IN0
+A => inst45.IN0
+A => inst42.IN0
+A => inst38.IN0
+A => inst64.IN0
+A => inst50.IN0
+A => inst46.IN2
+B => inst4.IN0
+B => inst29.IN0
+B => inst56.IN0
+B => inst54.IN1
+B => inst52.IN2
+B => inst22.IN2
+B => inst17.IN1
+B => inst14.IN1
+B => inst26.IN0
+B => inst32.IN0
+B => inst28.IN0
+B => inst74.IN0
+B => inst6.IN1
+B => inst8.IN0
+B => inst73.IN0
+B => inst45.IN1
+B => inst39.IN0
+B => inst70.IN0
+B => inst46.IN0
+C => inst4.IN1
+C => inst21.IN0
+C => inst53.IN1
+C => inst60.IN0
+C => inst35.IN0
+C => inst55.IN0
+C => inst15.IN0
+C => inst16.IN0
+C => inst20.IN1
+C => inst26.IN1
+C => inst27.IN2
+C => inst31.IN0
+C => inst74.IN1
+C => inst6.IN2
+C => inst9.IN0
+C => inst67.IN0
+C => inst43.IN0
+C => inst44.IN1
+C => inst37.IN0
+C => inst48.IN0
+C => inst63.IN1
+C => inst46.IN1
+D => inst3.IN2
+D => inst29.IN1
+D => inst56.IN1
+D => inst60.IN1
+D => inst51.IN0
+D => inst55.IN1
+D => inst15.IN1
+D => inst16.IN1
+D => inst23.IN0
+D => inst26.IN2
+D => inst33.IN0
+D => inst28.IN1
+D => inst62.IN1
+D => inst12.IN1
+D => inst73.IN1
+D => inst65.IN0
+D => inst37.IN1
+D => inst49.IN0
+D => inst63.IN2
+saida_b <= inst58.DB_MAX_OUTPUT_PORT_TYPE
+saida_c <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+saida_d <= inst36.DB_MAX_OUTPUT_PORT_TYPE
+saida_e <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+saida_f <= inst40.DB_MAX_OUTPUT_PORT_TYPE
+saida_g <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|registrador:inst
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLRN => inst1.ACLR
+CLRN => inst2.ACLR
+CLRN => inst7.ACLR
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst7.CLK
+LOAD => MUX:inst6.Chave
+LOAD => MUX:inst8.Chave
+LOAD => MUX:inst9.Chave
+LOAD => MUX:inst10.Chave
+D[0] => MUX:inst6.B
+D[1] => MUX:inst8.B
+D[2] => MUX:inst9.B
+D[3] => MUX:inst10.B
+
+
+|cpu|registrador:inst|MUX:inst6
+Saida <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+Chave => inst1.IN1
+Chave => inst3.IN0
+A => inst2.IN0
+
+
+|cpu|registrador:inst|MUX:inst8
+Saida <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+Chave => inst1.IN1
+Chave => inst3.IN0
+A => inst2.IN0
+
+
+|cpu|registrador:inst|MUX:inst9
+Saida <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+Chave => inst1.IN1
+Chave => inst3.IN0
+A => inst2.IN0
+
+
+|cpu|registrador:inst|MUX:inst10
+Saida <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+B => inst1.IN0
+Chave => inst1.IN1
+Chave => inst3.IN0
+A => inst2.IN0
+
+
