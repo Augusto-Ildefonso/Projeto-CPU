@@ -24,7 +24,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect -256 664 -88 680)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "CLK" (rect 5 0 27 12)(font "Arial" ))
+	(text "CLK" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect -256 640 -88 656)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "LOAD" (rect 5 0 35 12)(font "Arial" ))
+	(text "LOAD" (rect 5 0 34 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -56,7 +56,23 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect -256 616 -88 632)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "D[3..0]" (rect 5 0 40 12)(font "Arial" ))
+	(text "D[3..0]" (rect 5 0 39 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -256 592 -88 608)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "CLRN" (rect 5 0 36 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -428,6 +444,21 @@ https://fpgasoftware.intel.com/eula.
 		(rectangle (rect 16 16 112 80))
 	)
 )
+(symbol
+	(rect 424 464 456 480)
+	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
+	(text "inst4" (rect 3 5 25 22)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+)
 (connector
 	(text "CLK" (rect 584 560 604 577)(font "Intel Clear" ))
 	(pt 616 576)
@@ -557,10 +588,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1072 336)
 )
 (connector
-	(pt -88 648)
-	(pt -64 648)
-)
-(connector
 	(text "LOAD" (rect 310 288 338 305)(font "Intel Clear" ))
 	(pt 368 304)
 	(pt 304 304)
@@ -580,3 +607,78 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1112 304)
 	(pt 1072 304)
 )
+(connector
+	(pt 440 480)
+	(pt 440 504)
+)
+(connector
+	(pt 648 536)
+	(pt 648 504)
+)
+(connector
+	(pt 888 536)
+	(pt 888 504)
+)
+(connector
+	(pt 440 504)
+	(pt 648 504)
+)
+(connector
+	(pt 1112 536)
+	(pt 1112 504)
+)
+(connector
+	(pt 648 504)
+	(pt 888 504)
+)
+(connector
+	(pt 1344 536)
+	(pt 1344 504)
+)
+(connector
+	(pt 888 504)
+	(pt 1112 504)
+)
+(connector
+	(pt 1112 504)
+	(pt 1344 504)
+)
+(connector
+	(pt 1344 616)
+	(pt 1344 656)
+)
+(connector
+	(pt 1112 616)
+	(pt 1112 656)
+)
+(connector
+	(pt 1112 656)
+	(pt 1344 656)
+)
+(connector
+	(pt 888 616)
+	(pt 888 656)
+)
+(connector
+	(pt 648 616)
+	(pt 648 656)
+)
+(connector
+	(pt 888 656)
+	(pt 1112 656)
+)
+(connector
+	(pt 648 656)
+	(pt 888 656)
+)
+(connector
+	(text "CLRN" (rect 599 640 626 657)(font "Intel Clear" ))
+	(pt 576 656)
+	(pt 648 656)
+)
+(junction (pt 648 504))
+(junction (pt 888 504))
+(junction (pt 1112 504))
+(junction (pt 1112 656))
+(junction (pt 888 656))
+(junction (pt 648 656))

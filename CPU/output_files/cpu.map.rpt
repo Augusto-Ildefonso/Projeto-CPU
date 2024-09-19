@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cpu
-Thu Sep 19 14:58:46 2024
+Thu Sep 19 15:30:33 2024
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -43,14 +43,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Sep 19 14:58:45 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu Sep 19 15:30:33 2024       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; cpu                                         ;
 ; Top-level Entity Name           ; cpu                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 4                                           ;
-; Total pins                      ; 13                                          ;
+; Total pins                      ; 14                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -195,14 +195,14 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                       ;
 ; Dedicated logic registers                   ; 4                     ;
 ;                                             ;                       ;
-; I/O pins                                    ; 13                    ;
+; I/O pins                                    ; 14                    ;
 ;                                             ;                       ;
 ; Total DSP Blocks                            ; 0                     ;
 ;                                             ;                       ;
 ; Maximum fan-out node                        ; registrador:inst|inst ;
 ; Maximum fan-out                             ; 8                     ;
-; Total fan-out                               ; 68                    ;
-; Average fan-out                             ; 1.66                  ;
+; Total fan-out                               ; 73                    ;
+; Average fan-out                             ; 1.70                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -211,7 +211,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+-------------+--------------+
-; |cpu                       ; 11 (0)              ; 4 (0)                     ; 0                 ; 0          ; 13   ; 0            ; |cpu                             ; cpu         ; work         ;
+; |cpu                       ; 11 (0)              ; 4 (0)                     ; 0                 ; 0          ; 14   ; 0            ; |cpu                             ; cpu         ; work         ;
 ;    |aula4:inst3|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cpu|aula4:inst3                 ; aula4       ; work         ;
 ;    |registrador:inst|      ; 4 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |cpu|registrador:inst            ; registrador ; work         ;
 ;       |MUX:inst10|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |cpu|registrador:inst|MUX:inst10 ; MUX         ; work         ;
@@ -230,7 +230,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -243,15 +243,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 4                           ;
-;     plain             ; 4                           ;
+;     CLR               ; 4                           ;
 ; arriav_lcell_comb     ; 11                          ;
 ;     normal            ; 11                          ;
 ;         3 data inputs ; 4                           ;
 ;         4 data inputs ; 7                           ;
-; boundary_port         ; 13                          ;
+; boundary_port         ; 14                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.95                        ;
+; Average LUT depth     ; 0.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -270,7 +270,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Thu Sep 19 14:58:37 2024
+    Info: Processing started: Thu Sep 19 15:30:25 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu -c cpu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -290,14 +290,14 @@ Info (12128): Elaborating entity "MUX" for hierarchy "registrador:inst|MUX:inst6
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 24 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
+Info (21057): Implemented 25 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
     Info (21059): Implemented 7 output pins
     Info (21061): Implemented 11 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4839 megabytes
-    Info: Processing ended: Thu Sep 19 14:58:46 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Processing ended: Thu Sep 19 15:30:33 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
 
 
